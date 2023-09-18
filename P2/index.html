@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Stats preview card component</title>
+  <style>
+    html, body {
+      font-family: 'Abril Fatface', sans-serif;
+      height: 100%;
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+      border: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(4, 10, 39);
+    }
+    .container{
+      border-radius: 8px;
+      display: flex;
+      height: 446px;
+      width: 1080px;
+    }
+    .text-container{
+      background-color: rgb(27, 2, 54);
+      border-radius: 5px 0 0 5px;
+      padding: 30px 70px 30px 70px;
+    }
+    .img-container{ order: 1; }
+    .img1{
+      filter: opacity(0.5) drop-shadow(0 0 rgb(144, 4, 144));
+      border-radius: 0 8px 8px 0;
+    }
+    .title,.para,.data{
+      color: white;
+      justify-content: space-around;
+    }
+    .title{ font-size: xx-large; }  
+    .data{
+      list-style: none;
+      display: flex;
+      padding-inline-start: 0px;
+      justify-content: space-between;
+    }
+    .diffSize{
+      font-weight: bolder;
+      font-size: xx-large;
+    }
+    .dataNumbers{
+      padding: 0px 15px 0 15px;
+      font-weight: lighter;
+      font-size:small;
+    }
+    .img2{ display: none;}
+    #diffCol{ color: rgb(144, 4, 144); }
+
+
+    
+    @media screen and (max-width:900px){
+      html, body{
+        align-items: flex-start;
+      }
+      .container{
+        display: block;
+        width: 540px;
+        text-align: center;
+        border-radius: 8px 8px 0 0;
+      }
+      .text-container{
+        padding: 50px;
+        margin-top: -5px;
+        border-radius: 0px 0px 8px 8px;
+      }
+      
+      .img1{ display: none; }
+      .img2{
+        border-radius: 8px 8px 0 0;
+        display: block;
+        width: 540px;
+        filter: opacity(0.5) drop-shadow(0 0 rgb(144, 4, 144));
+      }
+      .data{ 
+        display: block; 
+        text-align: center;
+        margin: 0%;
+      }
+      .diffSize{ padding: 0px 150px; }
+
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="img-container">
+      <img src="images\image-header-desktop.jpg" alt="" class="img1">
+      <img src="images\image-header-mobile.jpg" alt="" class="img2">
+      </div>
+      <div class="text-container">
+        <h2 class="title">
+          Get <span id="diffCol">insights</span> that help your business grow.
+        </h2>
+        <br>
+        <p class="para">
+          Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+          experience, and overall efficiency.
+        </p>
+        <br>
+        <div class="dataCont">
+          <ul class="data">
+            <li class="dataNumbers"><span class="diffSize">10k+</span> COMPANIES</li>
+            <li class="dataNumbers"><span class="diffSize">314</span> TEMPLATES</li>
+            <li class="dataNumbers"><span class="diffSize">12m+</span> QUERIES</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </body>
+</html>
